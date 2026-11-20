@@ -1,15 +1,13 @@
-# Agent Jack onboarding
+# Onboarding
 
-**Early adopter?** You get `AGENTS.md` from us as an e-mail attachment. Save it in its own folder (for example `~/Developer/onboarding`), open that folder in your coding agent (Codex, Claude Code, …) and tell it:
+Public setup guides for our products, one folder per product. Each folder has a `README.md` for people and an `AGENTS.md` that your coding agent (Codex, Claude Code, …) follows step by step. Your agent asks before every install; you always sign in yourself and it never sees your passwords.
 
-> Read `AGENTS.md` in this folder and set up Agent Jack on my Mac, step by step. Ask me before every install.
+| Product | Guide | What it sets up |
+| --- | --- | --- |
+| Agent Jack | [agent-jack/](agent-jack/README.md) | Web sign-in, the Agent Jack desktop app for macOS, the Server engine (starter, then your own OpenRouter key) |
 
-Everything the agent needs is in [AGENTS.md](AGENTS.md): what your Mac needs, which access we gave you, each step with a check, and when it has to stop and let you do something yourself (sign-ins, 2FA, macOS prompts, anything that costs money). You sign in yourself; the agent never sees your passwords.
+Related public repos: [agent-jack-setup](https://github.com/m-check1B/agent-jack-setup) (Agent Jack local labs: install, doctor, repair; not for early-adopter seats yet, see agent-jack/AGENTS.md Part E) and [t3-code-tentacles](https://github.com/m-check1B/t3-code-tentacles) (how Agent Jack drives coding agents through T3 Code).
 
-When something doesn't work, reply to the welcome e-mail with the report the agent prints at the end.
+Česky: návody k našim produktům, jedna složka na produkt. Svému agentovi dejte `AGENTS.md` z příslušné složky, například pro Agent Jacka: „Přečti si https://github.com/m-check1B/onboarding/blob/main/agent-jack/AGENTS.md a nastav mi krok za krokem Agent Jacka na Macu. Před každou instalací se mě zeptej.“
 
-Česky: `AGENTS.md` vám pošleme e-mailem jako přílohu. Uložte ji do samostatné složky (třeba `~/Developer/onboarding`), tu složku otevřete ve svém agentovi (Codex, Claude Code…) a napište mu: „Přečti si `AGENTS.md` v této složce a nastav mi krok za krokem Agent Jacka na Macu. Před každou instalací se mě zeptej.“ Přihlašujete se vždy sami.
-
----
-
-`internal/` holds our own onboarding runbooks, templates and lessons. This repo is not shared with early adopters.
+New product? Add `<product>/README.md` + `<product>/AGENTS.md` and a row above; its private runbooks and templates go in the private twin under `internal/<product>/`.
