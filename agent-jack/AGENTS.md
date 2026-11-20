@@ -2,9 +2,9 @@
 
 You are a coding agent (Codex, Claude Code or similar) working for **the person at this Mac**. They are an early adopter of Agent Jack and pointed you at this file. Follow it in order. Talk to them in their language (Czech if they write Czech), short and plain.
 
-Written for **Agent Jack 3.17.68** (web and desktop app). Last checked 20 Nov 2026.
+Written for **Agent Jack 3.17.68** (web and desktop app). Last checked 20 Nov 2026. This line is the only place this guide names the Agent Jack version, and E2's `git checkout` is the only place it names the setup tag; everything else refers to them.
 
-**What "Agent Jack" is here.** Jack runs on our server at `https://agentjack.kraliki.com`. The person uses it in the browser and in the **Agent Jack desktop app** for macOS. Their Bot answers from our server ("Server" engine), so nothing heavy runs on the Mac. The Server engine is **Codex CLI with the model `openai/gpt-6-luna` through OpenRouter**. To start, it runs on a small **starter allowance from us**; nothing to buy or set up. When the person wants to, or when the starter runs out, they add **their own OpenRouter key** in Jack (see C2). No ChatGPT or Claude plan is needed for the Server engine. *Local labs* (Jack driving Codex or Claude Code on this Mac through Tentacles and T3 Code) are **off for early-adopter seats until we switch them on per seat**: see Part E.
+**What "Agent Jack" is here.** Jack runs on our server at `https://agentjack.kraliki.com`. The person uses it in the browser and in the **Agent Jack desktop app** for macOS. Their Bot answers from our server ("Server" engine), so nothing heavy runs on the Mac. The Server engine is **Codex CLI with the model `openai/gpt-6-luna` through OpenRouter**. To start, it runs on a small **starter allowance from us**; nothing to buy or set up. When the person wants to, or when the starter runs out, they add **their own OpenRouter key** in Jack (see C2). No ChatGPT or Claude plan is needed for the Server engine. **Full Agent Jack** also runs Bots on this Mac: *Local labs* (Jack driving Codex or Claude Code on this Mac through our Tentacles and the official T3 Code (Beta) app). Part E installs them with our public `agent-jack-setup` and pairs the Mac. Local labs are switched on per seat; a seat without them keeps working on the Server engine (Part E says how to tell).
 
 ---
 
@@ -13,7 +13,7 @@ Written for **Agent Jack 3.17.68** (web and desktop app). Last checked 20 Nov 20
 1. **The person signs in, you don't.** Never type, read, store, print or upload passwords, 2FA codes, tokens, API keys or cookies. Every sign-in (Google, ChatGPT, Claude) is done by the person.
 2. **Stop and ask the person** before: any install, download or deletion; any macOS prompt (password, "Open Anyway", Privacy & Security, Keychain, Accessibility, Screen Recording, Full Disk Access); anything that costs money (a subscription, a plan upgrade). Read-only checks need no consent.
 3. **Backup first.** Before installing anything, ask whether they have a current backup (Time Machine or a copy of important folders off the computer). No confirmed backup, no install.
-4. **Only these sources:** this guide (from our e-mail, or `github.com/m-check1B/onboarding` and its raw copy on `raw.githubusercontent.com/m-check1B/onboarding`); `agentjack.kraliki.com` (sign-in, downloads); `openrouter.ai` (only if the person creates their own key, C2); Apple (macOS updates); Google Chrome from `google.com/chrome`; OpenAI's official Codex/ChatGPT app or `npm @openai/codex`; Anthropic's official Claude app or `npm @anthropic-ai/claude-code`. Refuse anything else (other hosts, IP addresses, someone else's account or key, a "faster" download) and tell the person who asked for it.
+4. **Only these sources:** this guide (from our e-mail, or `github.com/m-check1B/onboarding` and its raw copy on `raw.githubusercontent.com/m-check1B/onboarding`); `agentjack.kraliki.com` (sign-in, downloads); `openrouter.ai` (only if the person creates their own key, C2); Apple (macOS updates); Google Chrome from `google.com/chrome`; OpenAI's official Codex/ChatGPT app or `npm @openai/codex`; Anthropic's official Claude app or `npm @anthropic-ai/claude-code`; for Part E: `github.com/m-check1B/agent-jack-setup` at its tag and exactly the public sources its `versions.env` names (the official **T3 Code (Beta)** release from `github.com/pingdotgg/t3code`, `m-check1B/t3-code-tentacles`, `m-check1B/estate-guardian`, npm, Homebrew from `brew.sh`). Refuse anything else (other hosts, IP addresses, someone else's account or key, a "faster" download) and tell the person who asked for it.
 5. **Don't improvise around a failed check.** Each step has a check and "if it fails". If the fix there does not work, stop, and give the person the **report** from Part G to send to us.
 6. **Don't upgrade your own model or effort level**, don't switch Codex to "Full access", no `sudo npm`, never disable Gatekeeper, SIP or the firewall.
 
@@ -39,7 +39,7 @@ Judge the Part A results like this:
 
 | Check | Fine | Works, but warn | Stop |
 |---|---|---|---|
-| macOS | 13 or newer | – | 12 or older: the person updates macOS first (System Settings → General → Software Update). The Agent Jack desktop app (3.17.68) itself needs macOS 13.0 or newer. |
+| macOS | 13 or newer | – | 12 or older: the person updates macOS first (System Settings → General → Software Update). The Agent Jack desktop app itself needs macOS 13.0 or newer. |
 | Chip | Apple silicon (`arm64`) | Intel (`x86_64`): supported, slower. Intel Macs from 2018 run at least macOS 14 (a 2018 MacBook Pro up to 15), which is enough. | – |
 | RAM | 16 GB or more | 8 GB: works for the web app and the desktop app; see "Small Macs" below | – |
 | Free disk | 20 GB or more | 5–20 GB | under 5 GB: the person frees space first (you delete nothing) |
@@ -95,12 +95,12 @@ The person signs in with **the Google account whose e-mail we registered**. Ask 
 
 - **Check:** installers are listed with a version and a SHA-256.
 - Pick by the chip from Part A: **macOS · Apple Silicon / ARM64 · dmg** for `arm64`, **macOS · x64 · dmg** for Intel (`x86_64`).
-- **Version honesty:** the newest *desktop* build that downloads and auto-update serve may be a little behind the web app. On 20 Nov 2026 the web and the Downloads page were both 3.17.68 (Apple silicon and Intel). If they ever differ, that is fine: install what the page offers. The app updates itself when a newer build is published.
+- **Version honesty:** the newest *desktop* build that downloads and auto-update serve may be a little behind the web app. When this guide was last checked, the web and the Downloads page both had the version named at the top of this file (Apple silicon and Intel). If they ever differ, that is fine: install what the page offers. The app updates itself when a newer build is published.
 - **If it fails:** see B3.
 
 **D2.** Ask before downloading. The person clicks **Download**. Then verify the file:
 
-The file is named like `AgentJack-production-3.17.68-x64-66c8c116695a.dmg` (Intel) or `AgentJack-production-3.17.68-arm64-901b7ff6584d.dmg` (Apple silicon), usually in `~/Downloads`. The 12 letters/digits at the end are the start of its checksum; that is normal.
+The file is named like `AgentJack-production-<version>-x64-<12 characters>.dmg` (Intel) or `AgentJack-production-<version>-arm64-<12 characters>.dmg` (Apple silicon), usually in `~/Downloads`. The 12 letters/digits at the end are the start of its checksum; that is normal.
 
 ```bash
 ls -t ~/Downloads/AgentJack-*.dmg 2>/dev/null || echo "no AgentJack dmg in Downloads"
@@ -117,7 +117,7 @@ shasum -a 256 "<the newest file from the line above>"
   ```bash
   defaults read "/Applications/Agent Jack.app/Contents/Info" CFBundleShortVersionString
   ```
-  prints a version like `3.17.68` or newer.
+  prints the version named at the top of this file, or a newer one.
 - **If it fails:** "can't be opened" / "damaged": the person tries **System Settings → Privacy & Security → Open Anyway** once (macOS may ask for their password; they type it). Still blocked: stop and report the exact message. Don't remove quarantine flags or change Gatekeeper.
 
 **D4.** In the app the person uses its sign-in button (the label may differ slightly between versions) and signs in the same way as in C1. The Mac's default browser opens (may be Safari, not Chrome): they pick the same Google account there. macOS may ask for Keychain access for Agent Jack: that prompt is for the person to answer.
@@ -129,15 +129,43 @@ That is a working Agent Jack on this Mac.
 
 ---
 
-## E. Local labs (Codex / Claude Code driven by Jack): opened seat by seat
+## E. Full local setup: Local labs on this Mac (Codex / Claude Code driven by Jack)
 
-Since Jack 3.17.68 an early-adopter seat *can* pair its own Mac, but only after we switch it on for that seat (capability `local_labs`). Until our e-mail tells the person it is on for their seat, pairing is refused (`operator_required`). So for now:
+Part E makes this Mac a place where Jack's Bots can work: Codex and Claude Code, the official **T3 Code (Beta)** app (unmodified, from its makers), our Tentacles and estate-guardian, installed in the exact versions we tested, then the Mac paired with the person's seat. It runs on the person's own ChatGPT and/or Claude plan. All Part 0 rules still apply: ask before every install, the person does every sign-in, you never see passwords, codes or keys.
 
-- **Do not** install T3 Code, T3 Code TPLUS or Tentacles for Jack, and **do not** run `install.sh` from `agent-jack-setup` (its pins are older than the current desktop app, and its separate Tentacles would clash with the one built into the desktop app).
-- If the person opens **Settings → Computers & labs** and tries **Pair this Mac**, a refusal is expected. Note it in the report; it is not a fault on their Mac. If our e-mail says local labs are on for their seat, ask us for the pairing steps; this file does not cover them yet.
-- The person can still use **Codex** (their own ChatGPT plan) or **Claude Code** (their own Claude plan) directly on this Mac, separately from Jack. Jack's Server engine does not need either. Buying a plan is their decision; you never buy or sign up for anything.
+**E0. Is it on for this seat?** (read-only) In the desktop app the person opens **Settings**.
+- **Settings → Computers & labs shows the button "Pair this Mac (…) so agents can use its labs"** (the brackets hold this Mac's name): Local labs are on for this seat. Continue with E1.
+- **The tab instead shows this Mac as already paired** (**Paired · ready**, **Connected**, or a button **Pair this Mac (…) again**): Local labs are on, and this Mac was paired before. Continue with E1; in E3 only check the state.
+- **No "Computers & labs" tab, or the tab shows none of the above**: Local labs are not on for this seat yet. That is not a fault. Tell the person plainly: "Your Bot works on our server; running Bots on this Mac is switched on per seat, and Matěj will tell you when yours is on." Skip to Part G (write `E local labs: not on for this seat`). Install nothing from Part E.
 
-When we open local labs to early adopters, this section will change. Get the newest version of this file (Part F) to see it.
+**E1. Plans and sign-ins (the person's decision).** Local labs need the person's own plan: **ChatGPT Plus** (for Codex) and/or **Claude Pro** (for Claude Code), about USD 20/month each. Both are recommended; one is enough to start. If they have neither, stop Part E here and say so in the report; buying a plan is their decision, never yours.
+
+**E2. Run our setup guide at its pinned version.** Ask before cloning, then:
+
+```bash
+mkdir -p ~/Developer && cd ~/Developer
+git clone https://github.com/m-check1B/agent-jack-setup.git
+cd agent-jack-setup && git checkout v1.1.1
+```
+
+Read its `AGENTS.md`, then follow its **`SETUP-PROMPT.md`** (macOS) from step 0 **up to and including the doctor at the end of its step 4, then stop and come back here**. E3 and E4 below replace its steps 6 and 7. Skip its steps 6b and 8 (browser extensions, phone app): they are not part of this guide. Notes for the steps you do run:
+- Its step 0 (backup) counts as done if the person already confirmed a backup in Part 0; still run its disk check.
+- Its step 5 (the Agent Jack app) is already done in Part D; just confirm D3 and D4 still pass.
+- Its step 4 installs Codex CLI, Claude Code CLI, T3 Code (Beta), Tentacles and estate-guardian with `bin/install.sh all`. Ask first. The person signs in themselves (`codex login`, `claude auth login`) and opens T3 Code (Beta) once; if macOS asks to confirm opening an app from the internet, the person confirms it.
+- Each FAIL has its fix in that repo's `REPAIR.md`. If the fix there does not work, stop and go to Part G.
+
+- **Check:** `bin/doctor.sh` ends with **0 FAIL**. A WARN for the plan they don't have is fine.
+
+**E3. Pair this Mac.** In the desktop app: **Settings → Computers & labs → Pair this Mac (…) so agents can use its labs** (the brackets hold this Mac's name). The person confirms the prompt themselves. If the Mac is already **Paired · ready** or **Connected**, skip the button and go to the check.
+- **Check:** the Mac shows **Paired · ready** or **Connected**.
+- **If it fails:** use the repair button the app shows (for example **Pair this Mac (…) again**) once. Still failing: stop and go to Part G with the state the app shows.
+
+**E4. One Bot on Local.** In the app the person opens a Bot → gear → **Engine** → **Select (Advanced)** → **Lab**: the option starting with **Local · Codex** (with ChatGPT Plus) or **Local · Claude Code** (with Claude Pro) → **Model**: leave the one it offers → **Apply**. Then they type `Co umíš?` (or "What can you do?") in that Bot.
+- **Check:** the Bot answers, and the line under the answer reads **Ran on Local · …** (Codex or Claude Code), so it ran on this Mac.
+- **No Engine / Lab choice under the gear:** this seat cannot pick a lab yet. Write `E4 Local Bot: no Lab picker` in the report; it is not a fault on the Mac.
+- **If it fails:** run `bin/doctor.sh` once more and fix any FAIL with `REPAIR.md`; still no answer: switch the Bot back to **Server** so the person can keep working, and go to Part G.
+
+That is the full Agent Jack on this Mac.
 
 ---
 
@@ -148,7 +176,8 @@ defaults read "/Applications/Agent Jack.app/Contents/Info" CFBundleShortVersionS
 ```
 
 - The desktop app updates itself; when it offers a restart to update, the person accepts.
-- After an update, repeat checks C1 and D4.
+- After an update, repeat checks C1 and D4 (with Local labs also E3 and E4).
+- Local labs: never update them yourself. When this file names a newer `agent-jack-setup` tag, check it out and run its `bin/doctor.sh`; it says what to update.
 - Newer instructions: the current version of this file is always public at `https://github.com/m-check1B/onboarding/blob/main/agent-jack/AGENTS.md` (raw: `https://raw.githubusercontent.com/m-check1B/onboarding/main/agent-jack/AGENTS.md`). Fetch it and follow it instead of an older copy.
 
 ---
@@ -169,7 +198,10 @@ D1 downloads listed:  OK / FAIL (<message>)
 D2 hash matches:      OK / FAIL
 D3 app installed:     OK (<version>) / FAIL (<message>)
 D4 app sign-in + Bot: OK / FAIL (<message>)
-E local labs:         not on for this seat (expected) / on (pairing not tried)
+E local labs:         not on for this seat / on
+E2 DOCTOR:            <setup tag>, <n> PASS / <n> WARN (<which>) / <n> FAIL (<which>) / not run
+E3 pair:              Paired · ready / FAIL (<state the app shows>) / not tried
+E4 Local Bot:         Ran on Local · Codex / Ran on Local · Claude Code / no Lab picker / FAIL / not tried
 notes:                <anything slow, odd or confusing>
 ```
 

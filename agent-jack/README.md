@@ -10,6 +10,6 @@ Everything the agent needs is in [AGENTS.md](AGENTS.md): what your Mac needs, wh
 
 When something doesn't work, reply to the welcome e-mail with the report the agent prints at the end.
 
-Related public repos: [agent-jack-setup](https://github.com/m-check1B/agent-jack-setup) (local labs: install, doctor, repair; not for early-adopter seats yet, see AGENTS.md Part E) and [t3-code-tentacles](https://github.com/m-check1B/t3-code-tentacles) (how Jack drives coding agents through T3 Code).
+Related public repos: [agent-jack-setup](https://github.com/m-check1B/agent-jack-setup) (Local labs on your Mac: install, doctor, repair; AGENTS.md Part E runs it for you) and [t3-code-tentacles](https://github.com/m-check1B/t3-code-tentacles) (how Jack drives coding agents through T3 Code).
 
 Česky: Dejte svému agentovi (Codex, Claude Code…) na Macu tento pokyn: „Přečti si https://github.com/m-check1B/onboarding/blob/main/agent-jack/AGENTS.md a nastav mi krok za krokem Agent Jacka na Macu. Před každou instalací se mě zeptej.“ Přihlašujete se vždy sami; agent vaše hesla nikdy nevidí.

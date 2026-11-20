@@ -4,9 +4,9 @@ Public setup guides for our products, one folder per product. Each folder has a 
 
 | Product | Guide | What it sets up |
 | --- | --- | --- |
-| Agent Jack | [agent-jack/](agent-jack/README.md) | Web sign-in, the Agent Jack desktop app for macOS, the Server engine (starter, then your own OpenRouter key) |
+| Agent Jack | [agent-jack/](agent-jack/README.md) | Web sign-in, the Agent Jack desktop app for macOS, the Server engine (starter, then your own OpenRouter key), and Local labs on your Mac (Codex / Claude Code, T3 Code (Beta), Tentacles) |
 
-Related public repos: [agent-jack-setup](https://github.com/m-check1B/agent-jack-setup) (Agent Jack local labs: install, doctor, repair; not for early-adopter seats yet, see agent-jack/AGENTS.md Part E) and [t3-code-tentacles](https://github.com/m-check1B/t3-code-tentacles) (how Agent Jack drives coding agents through T3 Code).
+Related public repos: [agent-jack-setup](https://github.com/m-check1B/agent-jack-setup) (Agent Jack Local labs: install, doctor, repair; agent-jack/AGENTS.md Part E runs it) and [t3-code-tentacles](https://github.com/m-check1B/t3-code-tentacles) (how Agent Jack drives coding agents through T3 Code).
 
 Česky: návody k našim produktům, jedna složka na produkt. Svému agentovi dejte `AGENTS.md` z příslušné složky, například pro Agent Jacka: „Přečti si https://github.com/m-check1B/onboarding/blob/main/agent-jack/AGENTS.md a nastav mi krok za krokem Agent Jacka na Macu. Před každou instalací se mě zeptej.“
 
