@@ -145,7 +145,7 @@ Part E makes this Mac a place where Jack's Bots can work: Codex and Claude Code,
 ```bash
 mkdir -p ~/Developer && cd ~/Developer
 git clone https://github.com/m-check1B/agent-jack-setup.git
-cd agent-jack-setup && git checkout v1.1.1
+cd agent-jack-setup && git checkout v1.1.2
 ```
 
 Read its `AGENTS.md`, then follow its **`SETUP-PROMPT.md`** (macOS) from step 0 **up to and including the doctor at the end of its step 4, then stop and come back here**. E3 and E4 below replace its steps 6 and 7. Skip its steps 6b and 8 (browser extensions, phone app): they are not part of this guide. Notes for the steps you do run:
